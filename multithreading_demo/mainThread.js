@@ -17,6 +17,6 @@ mainThreadWorker.on("message", output => {
 console.log('Hello world!');
 
 // Main thread worker post messages with data to the worker in worker.js,
-// hence the same worker in worker.js is used to run multiple CPU-intensive operations.
+// hence the same worker in worker.js is used to run multiple CPU-intensive operations without requireing the worker to exit after one task execution.
 mainThreadWorker.postMessage({ str: "myString" });
 mainThreadWorker.postMessage({ str: myString });
